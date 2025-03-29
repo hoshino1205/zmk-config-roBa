@@ -109,7 +109,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp INT_HENKAN  &sk LCTRL  &lt 1 BACKSPACE      &lt 2 SPACE  &lt 2 SPACE                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN>;
         };
 
         SPECIALCHAR {
@@ -143,10 +143,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &mkp MCLK  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5      &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans     &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                 &mkp MB3
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &none   &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &mkp MB3
             >;
         };
 
