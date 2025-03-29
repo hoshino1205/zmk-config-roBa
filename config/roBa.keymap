@@ -98,7 +98,7 @@
         addquotechar: addquotechar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HOME &kp GT &kp HOME &kp DOWN>;
+            bindings = <&kp HOME &kp LANGUAGE_2 &kp GT &kp HOME &kp DOWN>;
             label = "ADDQUOTECHAR";
         };
     };
