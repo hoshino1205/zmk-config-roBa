@@ -130,7 +130,7 @@
 &mt LEFT_CONTROL TAB  &sk LEFT_WIN  &mt LEFT_ALT LANG2  &mt LEFT_ALT LANGUAGE_1  &TdLeftThumb2  &lt 1 BACKSPACE      &lt 1 BACKSPACE  &lt 2 SPACE                             &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
         SPECIALCHAR {
@@ -141,7 +141,7 @@
 &trans            &trans             &trans      &trans           &trans          &trans      &trans  &trans                                                         &none
             >;
 
-            sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         ARROW {
@@ -151,8 +151,6 @@
 &none         &none         &none         &none         &none         &none       &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
 &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                                         &none
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         FUNCTION {
