@@ -24,7 +24,7 @@
         };
 
         underscore {
-            bindings = <&kp UNDER>;
+            bindings = <&kp LS(INT_RO)>;
             key-positions = <7 6>;
         };
 
