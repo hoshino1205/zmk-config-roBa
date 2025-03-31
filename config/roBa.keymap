@@ -199,6 +199,14 @@
             tap-ms = <10>;
         };
 
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <20>;
+        };
+
         TdLeftThumb2: TdLeftThumb2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TDLEFTTHUMB2";
