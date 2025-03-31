@@ -135,10 +135,10 @@
 
         SPECIALCHAR {
             bindings = <
-&none             &kp AT             &kp EXCL    &kp HASH         &kp PLUS                            &kp COLON  &kp MINUS             &kp DOUBLE_QUOTES  &kp SLASH  &kp PERCENT
-&kp LEFT_BRACKET  &kp AMPS           &kp DOLLAR  &kp CARET        &kp LEFT_BRACE  &none       &none   &kp UNDER  &kp SINGLE_QUOTE      &kp SEMI           &kp AMPS   &kp AT
-&none             &kp DOUBLE_QUOTES  &kp EQUAL   &kp LS(INT_YEN)  &kp INT_YEN     &none       &none   &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACKET  &kp HASH   &kp SLASH
-&trans            &trans             &trans      &trans           &trans          &trans      &trans  &trans                                                         &none
+&none             &kp AT             &kp EXCL    &kp HASH         &kp PLUS                                   &kp COLON  &kp MINUS             &kp DOUBLE_QUOTES  &kp SLASH  &kp PERCENT
+&kp LEFT_BRACKET  &kp AMPS           &kp DOLLAR  &kp CARET        &kp LEFT_BRACE  &none       &bt BT_DISC 0  &kp UNDER  &kp SINGLE_QUOTE      &kp SEMI           &kp AMPS   &kp AT
+&none             &kp DOUBLE_QUOTES  &kp EQUAL   &kp LS(INT_YEN)  &kp INT_YEN     &none       &bt BT_DISC 1  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACKET  &kp HASH   &kp SLASH
+&trans            &trans             &trans      &trans           &trans          &trans      &trans         &trans                                                         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -146,10 +146,10 @@
 
         ARROW {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                      &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0
-&none         &none         &none         &none         &none         &none       &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none         &none         &none         &none         &none         &none       &trans  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                                         &none
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0
+&none         &none         &none         &none         &none         &none       &bt BT_PRV  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none         &none         &none         &none         &none         &none       &bt BT_NXT  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
+&trans        &trans        &trans        &trans        &trans        &trans      &trans      &trans                                                         &none
             >;
         };
 
