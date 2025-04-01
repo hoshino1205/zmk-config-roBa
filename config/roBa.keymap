@@ -223,7 +223,7 @@
             bindings = <&kp LANGUAGE_1>, <&kp LANGUAGE_2>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
     };
 };
