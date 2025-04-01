@@ -10,213 +10,218 @@
 #define NUM 6
 
 / {
+    combos {
+        compatible = "zmk,combos";
 
-combos {
-    compatible = "zmk,combos";
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <0 1>;
+        };
 
-    tab {
-        bindings = <&kp TAB>;
-        key-positions = <0 1>;
+        BS {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <19 18>;
+        };
+
+        underscore {
+            bindings = <&kp LS(INT_RO)>;
+            key-positions = <7 6>;
+        };
+
+        hyphen {
+            bindings = <&kp MINUS>;
+            key-positions = <7 8>;
+        };
+
+        redo {
+            bindings = <&kp LC(Y)>;
+            key-positions = <17 18>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <12 13>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <11 12>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <24 25>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <13 14>;
+        };
+
+        delete {
+            bindings = <&kp DEL>;
+            key-positions = <8 9>;
+        };
+
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <19 20>;
+        };
+
+        CloseTab {
+            bindings = <&kp LG(W)>;
+            key-positions = <18 19 20 21>;
+        };
+
+        RedoTab {
+            bindings = <&kp LS(LG(T))>;
+            key-positions = <6 7 8 9>;
+        };
+
+        MoveToPageEnd {
+            bindings = <&kp LC(END)>;
+            key-positions = <18 19 20>;
+        };
+
+        MoveToPageTop {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <6 7 8>;
+        };
     };
 
-    BS {
-        bindings = <&kp BACKSPACE>;
-        key-positions = <19 18>;
+    macros {
+        setphrase1: setphrase1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp LS(S) &kp H &kp O &kp W &kp A &kp N3 &kp N7 &kp N1 &kp N2 &kp N0 &kp N5>;
+            label = "SETPHRASE1";
+        };
+
+        setphrase2: setphrase2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp H &kp O &kp S &kp H &kp I &kp N &kp O &kp MINUS &kp T &kp A &kp K &kp E &kp S &kp H &kp I &kp LEFT_BRACKET &kp M &kp K &kp I &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
+            label = "SETPHRASE2";
+        };
+
+        setphrase3: setphrase3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp H &kp O &kp S &kp H &kp I &kp N &kp O &kp LEFT_BRACKET &kp P &kp T &kp U &kp N &kp E &kp D &kp DOT &kp N &kp E &kp T>;
+            label = "SETPHRASE3";
+        };
+
+        addquotechar: addquotechar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp LANGUAGE_2 &kp GT &kp HOME &kp DOWN>;
+            label = "ADDQUOTECHAR";
+        };
+
+        setphraseQ: setphraseQ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q>;
+            label = "SETPHRASEQ";
+        };
     };
 
-    underscore {
-        bindings = <&kp LS(INT_RO)>;
-        key-positions = <7 6>;
-    };
+    keymap {
+        compatible = "zmk,keymap";
 
-    hyphen {
-        bindings = <&kp MINUS>;
-        key-positions = <7 8>;
-    };
-
-    redo {
-        bindings = <&kp LC(Y)>;
-        key-positions = <17 18>;
-    };
-
-    copy {
-        bindings = <&kp LC(C)>;
-        key-positions = <12 13>;
-    };
-
-    cut {
-        bindings = <&kp LC(X)>;
-        key-positions = <11 12>;
-    };
-
-    paste {
-        bindings = <&kp LC(V)>;
-        key-positions = <24 25>;
-    };
-
-    undo {
-        bindings = <&kp LC(Z)>;
-        key-positions = <13 14>;
-    };
-
-    delete {
-        bindings = <&kp DEL>;
-        key-positions = <8 9>;
-    };
-
-    space {
-        bindings = <&kp SPACE>;
-        key-positions = <19 20>;
-    };
-
-    CloseTab {
-        bindings = <&kp LG(W)>;
-        key-positions = <18 19 20 21>;
-    };
-
-    RedoTab {
-        bindings = <&kp LS(LG(T))>;
-        key-positions = <6 7 8 9>;
-    };
-
-    MoveToPageEnd {
-        bindings = <&kp LC(END)>;
-        key-positions = <18 19 20>;
-    };
-
-    MoveToPageTop {
-        bindings = <&kp LC(HOME)>;
-        key-positions = <6 7 8>;
-    };
-};
-
-macros {
-    setphrase1: setphrase1 {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LANGUAGE_2 &kp LS(S) &kp H &kp O &kp W &kp A &kp N3 &kp N7 &kp N1 &kp N2 &kp N0 &kp N5>;
-        label = "SETPHRASE1";
-    };
-
-    setphrase2: setphrase2 {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LANGUAGE_2 &kp H &kp O &kp S &kp H &kp I &kp N &kp O &kp MINUS &kp T &kp A &kp K &kp E &kp S &kp H &kp I &kp LEFT_BRACKET &kp M &kp K &kp I &kp DOT &kp C &kp O &kp DOT &kp J &kp P>;
-        label = "SETPHRASE2";
-    };
-
-    setphrase3: setphrase3 {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp LANGUAGE_2 &kp H &kp O &kp S &kp H &kp I &kp N &kp O &kp LEFT_BRACKET &kp P &kp T &kp U &kp N &kp E &kp D &kp DOT &kp N &kp E &kp T>;
-        label = "SETPHRASE3";
-    };
-
-    addquotechar: addquotechar {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&kp HOME &kp LANGUAGE_2 &kp GT &kp HOME &kp DOWN>;
-        label = "ADDQUOTECHAR";
-    };
-};
-
-keymap {
-    compatible = "zmk,keymap";
-
-    default_layer {
-        bindings = <
+        default_layer {
+            bindings = <
 &TdTabOnQKey          &kp W         &kp E               &kp R                    &kp T                                                &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A                 &kp S         &kp D               &kp F                    &kp G          &none                &bt BT_SEL 0     &kp H        &kp J  &kp K      &lt 3 L  &kp ENTER
 &mt LEFT_SHIFT Z      &kp X         &kp C               &kp V                    &kp B          &kp ESCAPE           &bt BT_SEL 1     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &mt LEFT_CONTROL TAB  &sk LEFT_WIN  &mt LEFT_ALT LANG2  &mt LEFT_ALT LANGUAGE_1  &TdLeftThumb2  &lt 1 BACKSPACE      &lt 1 BACKSPACE  &lt 2 SPACE                             &kp RIGHT_SHIFT
-        >;
+            >;
 
-        sensor-bindings = <&scroll_up_down>;
-    };
+            sensor-bindings = <&scroll_up_down>;
+        };
 
-    SPECIALCHAR {
-        bindings = <
+        SPECIALCHAR {
+            bindings = <
 &none             &kp AT             &kp EXCL    &kp HASH         &kp PLUS                                   &kp COLON  &kp MINUS             &kp DOUBLE_QUOTES  &kp SLASH        &kp PERCENT
 &kp LEFT_BRACKET  &kp AMPS           &kp DOLLAR  &kp CARET        &kp LEFT_BRACE  &none       &bt BT_DISC 2  &kp UNDER  &kp SINGLE_QUOTE      &kp SEMI           &kp AMPS         &kp AT
 &none             &kp DOUBLE_QUOTES  &kp EQUAL   &kp LS(INT_YEN)  &kp INT_YEN     &none       &bt BT_DISC 3  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACKET  &kp NON_US_HASH  &kp SLASH
 &trans            &trans             &trans      &trans           &trans          &trans      &trans         &trans                                                               &none
-        >;
+            >;
 
-        sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
-    };
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
+        };
 
-    ARROW {
-        bindings = <
+        ARROW {
+            bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0
 &none         &none         &none         &none         &none         &none       &bt BT_DISC 0  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
 &none         &none         &none         &none         &none         &none       &bt BT_DISC 1  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
 &trans        &trans        &trans        &trans        &trans        &trans      &trans         &trans                                                         &none
-        >;
-    };
+            >;
+        };
 
-    FUNCTION {
-        bindings = <
+        FUNCTION {
+            bindings = <
 &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                             &setphrase1   &setphrase2   &setphrase3    &trans  &trans
 &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans      &out OUT_BLE  &kp LANG2     &kp LANG1     &addquotechar  &trans  &trans
 &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans      &out OUT_USB  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &trans  &bt BT_CLR
 &trans   &trans   &trans   &trans   &trans   &trans      &trans        &trans                                             &bt BT_CLR_ALL
-        >;
-    };
+            >;
+        };
 
-    MOUSE {
-        bindings = <
+        MOUSE {
+            bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &none   &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &mkp MB3
-        >;
-    };
+            >;
+        };
 
-    SCROLL {
-        bindings = <
+        SCROLL {
+            bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-        >;
-    };
+            >;
+        };
 
-    layer_6 {
-        bindings = <
+        layer_6 {
+            bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
-        >;
-    };
-};
-
-behaviors {
-    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <20>;
+            >;
+        };
     };
 
-    TdLeftThumb2: TdLeftThumb2 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TDLEFTTHUMB2";
-        #binding-cells = <0>;
-        bindings = <&sk LEFT_CONTROL>, <&kp ESCAPE>;
+    behaviors {
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tapping-term-ms = <200>;
+            tap-ms = <20>;
+        };
+
+        TdLeftThumb2: TdLeftThumb2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDLEFTTHUMB2";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_CONTROL>, <&kp ESCAPE>;
+
+            tapping-term-ms = <200>;
+        };
+
+        TdTabOnQKey: TdTabOnQKey {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDTABONQKEY";
+            #binding-cells = <0>;
+            bindings = <&setphraseQ>, <&kp TAB>;
+
+            tapping-term-ms = <200>;
+        };
     };
-
-    TdTabOnQKey: TdTabOnQKey {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TDTABONQKEY";
-        #binding-cells = <0>;
-        bindings = <&kp Q>, <&kp TAB>;
-
-        tapping-term-ms = <200>;
-    };
-};
-
 };
