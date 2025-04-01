@@ -117,13 +117,6 @@
             bindings = <&kp HOME &kp LANGUAGE_2 &kp GT &kp HOME &kp DOWN>;
             label = "ADDQUOTECHAR";
         };
-
-        setphraseQ: setphraseQ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Q>;
-            label = "SETPHRASEQ";
-        };
     };
 
     keymap {
@@ -219,9 +212,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TDTABONQKEY";
             #binding-cells = <0>;
-            bindings = <&setphraseQ>, <&kp TAB>;
+            bindings = <&kp Q>, <&kp TAB>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
         };
     };
 };
