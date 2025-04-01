@@ -214,7 +214,7 @@
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp TAB>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
     };
 };
