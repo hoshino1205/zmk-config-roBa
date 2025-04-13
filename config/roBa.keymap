@@ -121,7 +121,8 @@
         SwitchToBt0: SwitchToBt0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE &bt BT_SEL 1>;
+            bindings = <&out OUT_BLE>, <&macro_wait_time 500>, <&bt BT_SEL 0>;
+
             label = "SWITCHTOBT0";
             wait-ms = <200>;
         };
@@ -129,7 +130,7 @@
         SwitchToBt1: SwitchToBt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE>, <&macro_wait_time 200>, <&bt BT_SEL 1>;
+            bindings = <&out OUT_BLE>, <&macro_wait_time 500>, <&bt BT_SEL 1>;
 
             label = "SWITCHTOBT1";
             wait-ms = <200>;
@@ -142,7 +143,7 @@
         default_layer {
             bindings = <
 &TdTabOnQKey          &kp W         &kp E         &kp R          &kp T                                             &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A                 &kp S         &kp D         &kp F          &kp G          &lt 1 SEPARATOR      &SwitchToBt1  &kp H        &kp J  &kp K      &lt 3 L  &kp ENTER
+&kp A                 &kp S         &kp D         &kp F          &kp G          &lt 1 SPACE          &SwitchToBt1  &kp H        &kp J  &kp K      &lt 3 L  &kp ENTER
 &mt LEFT_SHIFT Z      &kp X         &kp C         &kp V          &kp B          &kp ESCAPE           &SwitchToBt0  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &mt LEFT_CONTROL TAB  &sk LEFT_WIN  &sk LEFT_ALT  &MmLang1Lang2  &TdLeftThumb2  &lt 1 BACKSPACE      &lt 1 SPACE   &lt 2 SPACE                             &kp RIGHT_SHIFT
             >;
@@ -163,10 +164,10 @@
 
         ARROW {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0
-&out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none       &bt BT_DISC 0  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none         &none         &none         &none         &none         &none       &bt BT_DISC 1  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
-&trans        &trans        &trans        &trans        &trans        &trans      &trans         &trans                                                         &none
+&kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3   &kp NUMBER_4   &kp NUMBER_5                              &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0
+&out OUT_USB  &out OUT_BLE    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none       &bt BT_DISC 0  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&bt BT_CLR    &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none       &bt BT_DISC 1  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
+&trans        &trans          &trans         &trans         &trans         &trans      &trans         &trans                                                         &none
             >;
         };
 
