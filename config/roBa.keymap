@@ -153,7 +153,7 @@
 
         SPECIALCHAR {
             bindings = <
-&none             &kp AT             &kp EXCL    &kp HASH         &kp PLUS                                   &kp UNDER          &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp LS(INTERNATIONAL_1)  &kp PERCENT
+&none             &kp AT             &kp EXCL    &kp HASH         &kp PLUS                                   &kp UNDER          &kp SINGLE_QUOTE  &kp SEMICOLON         &kp LS(INTERNATIONAL_1)  &kp PERCENT
 &kp LEFT_BRACKET  &kp AMPS           &kp DOLLAR  &kp CARET        &kp LEFT_BRACE  &none       &bt BT_DISC 2  &kp RIGHT_BRACKET  &kp ASTRK         &kp LEFT_PARENTHESIS  &kp NON_US_HASH          &kp AT
 &none             &kp DOUBLE_QUOTES  &kp EQUAL   &kp LS(INT_YEN)  &kp INT_YEN     &none       &bt BT_DISC 3  &kp COLON          &kp MINUS         &kp COMMA             &kp DOT                  &kp SLASH
 &trans            &trans             &trans      &trans           &trans          &trans      &trans         &trans                                                                              &none
