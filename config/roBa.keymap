@@ -141,10 +141,10 @@
 
         default_layer {
             bindings = <
-&TdTabOnQKey          &kp W         &kp E         &kp R          &kp T                                                &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A                 &kp S         &kp D         &kp F          &kp G          &none                &SwitchToBt1     &kp H        &kp J  &kp K      &lt 3 L  &kp ENTER
-&mt LEFT_SHIFT Z      &kp X         &kp C         &kp V          &kp B          &kp ESCAPE           &SwitchToBt0     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_CONTROL TAB  &sk LEFT_WIN  &sk LEFT_ALT  &MmLang1Lang2  &TdLeftThumb2  &lt 1 BACKSPACE      &lt 1 BACKSPACE  &lt 2 SPACE                             &kp RIGHT_SHIFT
+&TdTabOnQKey          &kp W         &kp E         &kp R          &kp T                                             &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A                 &kp S         &kp D         &kp F          &kp G          &lt 1 SEPARATOR      &SwitchToBt1  &kp H        &kp J  &kp K      &lt 3 L  &kp ENTER
+&mt LEFT_SHIFT Z      &kp X         &kp C         &kp V          &kp B          &kp ESCAPE           &SwitchToBt0  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_CONTROL TAB  &sk LEFT_WIN  &sk LEFT_ALT  &MmLang1Lang2  &TdLeftThumb2  &lt 1 BACKSPACE      &lt 1 SPACE   &lt 2 SPACE                             &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -152,10 +152,10 @@
 
         SPECIALCHAR {
             bindings = <
-&none             &kp AT             &kp EXCL    &kp HASH         &kp PLUS                                   &kp COLON  &kp MINUS             &kp DOUBLE_QUOTES  &kp SLASH        &kp PERCENT
-&kp LEFT_BRACKET  &kp AMPS           &kp DOLLAR  &kp CARET        &kp LEFT_BRACE  &none       &bt BT_DISC 2  &kp UNDER  &kp SINGLE_QUOTE      &kp SEMI           &kp AMPS         &kp AT
-&none             &kp DOUBLE_QUOTES  &kp EQUAL   &kp LS(INT_YEN)  &kp INT_YEN     &none       &bt BT_DISC 3  &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RIGHT_BRACKET  &kp NON_US_HASH  &kp SLASH
-&trans            &trans             &trans      &trans           &trans          &trans      &trans         &trans                                                               &none
+&none             &kp AT             &kp EXCL    &kp HASH         &kp PLUS                                   &kp UNDER          &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp LS(INTERNATIONAL_1)  &kp PERCENT
+&kp LEFT_BRACKET  &kp AMPS           &kp DOLLAR  &kp CARET        &kp LEFT_BRACE  &none       &bt BT_DISC 2  &kp RIGHT_BRACKET  &kp ASTRK         &kp LEFT_PARENTHESIS  &kp NON_US_HASH          &kp AT
+&none             &kp DOUBLE_QUOTES  &kp EQUAL   &kp LS(INT_YEN)  &kp INT_YEN     &none       &bt BT_DISC 3  &kp COLON          &kp MINUS         &kp COMMA             &kp DOT                  &kp SLASH
+&trans            &trans             &trans      &trans           &trans          &trans      &trans         &trans                                                                              &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -164,7 +164,7 @@
         ARROW {
             bindings = <
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9     &kp NUMBER_0
-&none         &none         &none         &none         &none         &none       &bt BT_DISC 0  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&out OUT_USB  &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none       &bt BT_DISC 0  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
 &none         &none         &none         &none         &none         &none       &bt BT_DISC 1  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
 &trans        &trans        &trans        &trans        &trans        &trans      &trans         &trans                                                         &none
             >;
@@ -181,10 +181,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &none   &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &mkp MB3
+&trans  &trans  &trans  &trans  &trans                        &trans    &trans    &none   &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB1  &mo 5   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB2  &mkp MB1                              &mkp MB3
             >;
         };
 
