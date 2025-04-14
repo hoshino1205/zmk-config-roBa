@@ -9,6 +9,8 @@
 #define SCROLL 5
 #define NUM 6
 
+&sl { release-after-ms = <250>; }; // ダブルクリックに必要な時間を設定
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -90,6 +92,21 @@
     };
 
     macros {
+        mkp_exit_AML: mkp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&sl MOUSE>;
+
+            label = "MKP_EXIT_AML";
+        };
+
         setphrase1: setphrase1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -185,7 +202,7 @@
 &trans  &trans  &trans  &trans  &trans                        &trans    &trans    &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB1  &mo 5   &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp MB2  &mkp MB1                              &mkp MB3
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp_exit_AML RCLK  &mkp_exit_AML LCLK                              &mkp MB3
             >;
         };
 
