@@ -5,12 +5,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 //#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
 
 &sl { release-after-ms = <250>; }; // ダブルクリックに必要な時間を設定
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -199,10 +199,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                        &trans    &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &mkp MB1  &mo 5   &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &mkp_exit_AML RCLK  &mkp_exit_AML LCLK                              &mkp MB3
+&trans  &trans  &trans  &trans  &trans                                 &trans             &trans             &trans  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans             &mkp_exit_AML MB1  &mo 5   &mkp_exit_AML MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans             &trans             &trans  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &mkp_exit_AML MB2  &mkp_exit_AML MB1                                                &mkp_exit_AML MB3
             >;
         };
 
