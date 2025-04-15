@@ -204,6 +204,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans             &trans             &trans   &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &mkp_exit_AML MB2  &mkp_exit_AML MB1                                                 &mkp_exit_AML MB3
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         SCROLL {
@@ -213,6 +215,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_6 {
