@@ -186,7 +186,7 @@
 &trans        &trans          &trans         &trans         &trans         &trans      &trans         &trans                                                         &none
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(HOME) LC(END)>;
+            sensor-bindings = <&inc_dec_kp LC(END) LC(HOME)>;
         };
 
         FUNCTION {
