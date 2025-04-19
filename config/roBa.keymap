@@ -270,14 +270,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TDMB1ONCOMMA";
             #binding-cells = <0>;
-            bindings = <&mkp MB1>, <&kp COMMA>;
+            bindings = <&kp COMMA>, <&mkp MB1>;
         };
 
         TdMB2onPeriod: TdMB2onPeriod {
             compatible = "zmk,behavior-tap-dance";
             label = "TDMB2ONPERIOD";
             #binding-cells = <0>;
-            bindings = <&mkp MB2>, <&kp PERIOD>;
+            bindings = <&kp PERIOD>, <&mkp MB2>;
         };
     };
 };
