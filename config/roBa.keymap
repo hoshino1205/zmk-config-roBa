@@ -69,26 +69,6 @@
             key-positions = <19 20>;
         };
 
-        CloseTab {
-            bindings = <&kp LG(W)>;
-            key-positions = <18 19 20 21>;
-        };
-
-        RedoTab {
-            bindings = <&kp LS(LG(T))>;
-            key-positions = <6 7 8 9>;
-        };
-
-        MoveToPageEnd {
-            bindings = <&kp LC(END)>;
-            key-positions = <18 19 20>;
-        };
-
-        MoveToPageTop {
-            bindings = <&kp LC(HOME)>;
-            key-positions = <6 7 8>;
-        };
-
         mb1 {
             bindings = <&mkp MB1>;
             key-positions = <30 31>;
@@ -97,6 +77,26 @@
         mb2 {
             bindings = <&mkp MB2>;
             key-positions = <31 32>;
+        };
+
+        MoveToPE {
+            bindings = <&kp LC(END)>;
+            key-positions = <30 31 32>;
+        };
+
+        MoveToPT {
+            bindings = <&kp LC(HOME)>;
+            key-positions = <18 19 20>;
+        };
+
+        CloseTab {
+            bindings = <&kp LG(W)>;
+            key-positions = <30 31 32 33>;
+        };
+
+        RedoTab {
+            bindings = <&kp LS(LG(T))>;
+            key-positions = <18 19 20 21>;
         };
     };
 
