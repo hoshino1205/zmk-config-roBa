@@ -158,10 +158,10 @@
 
         default_layer {
             bindings = <
-&TdTabOnQKey      &kp W         &kp E         &kp R          &kp T                                             &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F          &kp G          &mo 2                &SwitchToBt1  &kp H        &kp J  &lt 5 K   &lt 3 L   &kp RET
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B          &kp ESCAPE           &SwitchToBt0  &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
-&lt 4 TAB         &sk LEFT_WIN  &sk LEFT_ALT  &MmLang1Lang2  &TdLeftThumb2  &lt 1 BACKSPACE      &lt 2 SPACE   &lt 1 SPACE                             &kp RIGHT_SHIFT
+&TdTabOnQKey      &kp W         &kp E         &kp R          &kp T                                             &kp Y        &kp U  &kp I          &kp O           &kp P
+&kp A             &kp S         &kp D         &kp F          &kp G          &mo 2                &SwitchToBt1  &kp H        &kp J  &lt 5 K        &lt 3 L         &kp RET
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B          &kp ESCAPE           &SwitchToBt0  &kp N        &kp M  &TdMB1onComma  &TdMB2onPeriod  &mt RIGHT_SHIFT SLASH
+&lt 4 TAB         &sk LEFT_WIN  &sk LEFT_ALT  &MmLang1Lang2  &TdLeftThumb2  &lt 1 BACKSPACE      &lt 2 SPACE   &lt 1 SPACE                                        &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -211,10 +211,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans             &trans  &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp_exit_AML MB1  &trans  &mkp_exit_AML MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans             &trans  &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -264,6 +264,20 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        TdMB1onComma: TdMB1onComma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDMB1ONCOMMA";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1>, <&kp COMMA>;
+        };
+
+        TdMB2onPeriod: TdMB2onPeriod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TDMB2ONPERIOD";
+            #binding-cells = <0>;
+            bindings = <&mkp MB2>, <&kp PERIOD>;
         };
     };
 };
