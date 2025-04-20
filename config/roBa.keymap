@@ -98,6 +98,11 @@
             bindings = <&kp LS(LG(T))>;
             key-positions = <18 19 20 41>;
         };
+
+        mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <30 32>;
+        };
     };
 
     macros {
@@ -190,10 +195,10 @@
 
         ARROW {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3   &kp NUMBER_4   &kp NUMBER_5                       &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&out OUT_USB  &out OUT_BLE    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none       &none   &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &kp F10
-&bt BT_CLR    &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none       &none   &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT     &none
-&trans        &trans          &trans         &trans         &trans         &trans      &trans  &trans                                                   &none
+&kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3   &kp NUMBER_4   &kp NUMBER_5                       &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&out OUT_USB  &out OUT_BLE    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none       &none   &MmLeftHome   &MmDownPD     &MmUpPU       &MmRightEnd   &kp F10
+&bt BT_CLR    &bt BT_CLR_ALL  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none       &none   &none         &MmLeftHome   &MmDownPD     &MmRightEnd   &kp F10
+&trans        &trans          &trans         &trans         &trans         &trans      &trans  &trans                                                  &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(END) LC(HOME)>;
@@ -276,31 +281,40 @@
             mods = <(MOD_LSFT)>;
         };
 
-        TdMB1onComma: TdMB1onComma {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDMB1ONCOMMA";
+        MmLeftHome: MmLeftHome {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMLEFTHOME";
+            bindings = <&kp LEFT>, <&kp HOME>;
+
             #binding-cells = <0>;
-            bindings = <&mkp MB1>, <&kp COMMA>;
+            mods = <(MOD_LSFT)>;
         };
 
-        TdMB2onPeriod: TdMB2onPeriod {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDMB2ONPERIOD";
+        MmDownPD: MmDownPD {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMDOWNPD";
+            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
+
             #binding-cells = <0>;
-            bindings = <&mkp MB2>, <&kp PERIOD>;
+            mods = <(MOD_LSFT)>;
         };
 
-        tog_on: tog_on {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "TOG_ON";
-            #binding-cells = <1>;
+        MmUpPU: MmUpPU {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMUPPU";
+            bindings = <&kp UP_ARROW>, <&kp PAGE_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
 
-        tog_off: tog_off {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "TOG_OFF";
-            #binding-cells = <1>;
-            toggle-mode = "off";
+        MmRightEnd: MmRightEnd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MMRIGHTEND";
+            bindings = <&kp RIGHT>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 };
