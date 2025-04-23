@@ -86,12 +86,12 @@
 
         CloseTab {
             bindings = <&kp LG(W)>;
-            key-positions = <41 18 19 20>;
+            key-positions = <18 19 20 21>;
         };
 
         RedoTab {
             bindings = <&kp LS(LG(T))>;
-            key-positions = <41 6 7 8>;
+            key-positions = <6 7 8 9>;
         };
 
         mb3 {
