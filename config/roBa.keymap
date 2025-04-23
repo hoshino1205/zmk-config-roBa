@@ -21,7 +21,7 @@
 
         BS {
             bindings = <&kp BACKSPACE>;
-            key-positions = <19 18>;
+            key-positions = <20 21>;
         };
 
         underscore {
@@ -64,44 +64,39 @@
             key-positions = <8 9>;
         };
 
-        space {
-            bindings = <&kp SPACE>;
-            key-positions = <19 20>;
-        };
-
         mb1 {
             bindings = <&mkp MB1>;
-            key-positions = <30 31>;
+            key-positions = <18 19>;
         };
 
         mb2 {
             bindings = <&mkp MB2>;
-            key-positions = <31 32>;
+            key-positions = <19 20>;
         };
 
         MoveToPE {
             bindings = <&kp LC(END)>;
-            key-positions = <30 31 32>;
+            key-positions = <18 19 20>;
         };
 
         MoveToPT {
             bindings = <&kp LC(HOME)>;
-            key-positions = <18 19 20>;
+            key-positions = <6 7 8>;
         };
 
         CloseTab {
             bindings = <&kp LG(W)>;
-            key-positions = <30 31 32 41>;
+            key-positions = <41 18 19 20>;
         };
 
         RedoTab {
             bindings = <&kp LS(LG(T))>;
-            key-positions = <18 19 20 41>;
+            key-positions = <41 6 7 8>;
         };
 
         mb3 {
             bindings = <&mkp MB3>;
-            key-positions = <30 32>;
+            key-positions = <18 20>;
         };
     };
 
