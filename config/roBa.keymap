@@ -21,7 +21,7 @@
 
         BS {
             bindings = <&kp BACKSPACE>;
-            key-positions = <20 21>;
+            key-positions = <17 18>;
         };
 
         underscore {
@@ -36,7 +36,7 @@
 
         redo {
             bindings = <&kp LC(Y)>;
-            key-positions = <17 18>;
+            key-positions = <25 26>;
         };
 
         copy {
