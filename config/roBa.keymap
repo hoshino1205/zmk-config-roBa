@@ -21,7 +21,7 @@
 
         BS {
             bindings = <&kp BACKSPACE>;
-            key-positions = <17 18>;
+            key-positions = <8 9>;
         };
 
         underscore {
@@ -61,7 +61,7 @@
 
         delete {
             bindings = <&kp DEL>;
-            key-positions = <8 9>;
+            key-positions = <17 18>;
         };
 
         mb1 {
