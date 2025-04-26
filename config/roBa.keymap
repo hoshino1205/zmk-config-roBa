@@ -164,7 +164,7 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 0>;
             label = "SWITCHTOBT0";
-            wait-ms = <200>;
+            wait-ms = <1000>;
         };
 
         SwitchToBt1: SwitchToBt1 {
@@ -172,27 +172,27 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 1>;
             label = "SWITCHTOBT1";
-            wait-ms = <200>;
+            wait-ms = <1000>;
         };
 
         AddParenthsis: MAddParenthsis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp ASTERISK &kp LEFT_PARENTHESIS &kp LEFT>;
+            bindings = <&kp LANGUAGE_2 &kp ASTERISK &kp LEFT_PARENTHESIS &kp LEFT &kp LANGUAGE_1>;
             label = "MADDPARENTHSIS";
         };
 
         AddBracket: AddBracket {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp RIGHT_BRACKET &kp NON_US_HASH &kp LEFT>;
+            bindings = <&kp LANGUAGE_2 &kp RIGHT_BRACKET &kp NON_US_HASH &kp LEFT &kp LANGUAGE_1>;
             label = "ADDBRACKET";
         };
 
         AddDoublequote: AddDoublequote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2 &kp AT &kp AT &kp LEFT>;
+            bindings = <&kp LANGUAGE_2 &kp AT &kp AT &kp LEFT &kp LANGUAGE_1>;
             label = "ADDDOUBLEQUOTE";
         };
     };
