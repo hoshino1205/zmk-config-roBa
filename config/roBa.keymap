@@ -276,7 +276,7 @@
             bindings = <
 &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &trans  &trans                           &trans             &kp LA(LC(Q))  &kp LA(LC(O))  &trans             &kp LA(LC(BACKSPACE))
 &trans            &trans            &trans            &trans  &trans  &trans      &trans       &kp LA(LC(EQUAL))  &kp LC(LA(E))  &kp LA(LC(G))  &kp LA(LC(MINUS))  &kp LA(LC(ENTER))
-&trans            &trans            &trans            &trans  &trans  &trans      &bootloader  &kp LG(PLUS)       &kp LA(LC(D))  &kp LA(LC(P))  &kp LG(MINUS)      &trans
+&trans            &trans            &trans            &trans  &trans  &trans      &bootloader  &kp LG(COLON)      &kp LA(LC(D))  &kp LA(LC(P))  &kp LG(MINUS)      &trans
 &trans            &trans            &trans            &trans  &trans  &trans      &trans       &trans                                                              &trans
             >;
         };
