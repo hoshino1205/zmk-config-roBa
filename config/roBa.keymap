@@ -64,9 +64,9 @@
             key-positions = <8 9>;
         };
 
-        mb1 {
+        mb1-left {
             bindings = <&mkp MB1>;
-            key-positions = <12 13 11>;
+            key-positions = <23 24 25>;
         };
 
         mb2 {
@@ -76,22 +76,22 @@
 
         MoveToPE {
             bindings = <&kp LC(END)>;
-            key-positions = <18 19 20>;
+            key-positions = <30 31 32>;
         };
 
         MoveToPT {
             bindings = <&kp LC(HOME)>;
-            key-positions = <6 7 8>;
+            key-positions = <18 19 20>;
         };
 
         CloseTab {
             bindings = <&kp LG(W)>;
-            key-positions = <18 19 20 21>;
+            key-positions = <30 31 32 33>;
         };
 
         RedoTab {
             bindings = <&kp LS(LG(T))>;
-            key-positions = <6 7 8 9>;
+            key-positions = <18 19 20 21>;
         };
 
         mb3 {
@@ -112,6 +112,11 @@
         mb3-2 {
             bindings = <&mkp MB3>;
             key-positions = <30 32>;
+        };
+
+        mb2-left {
+            bindings = <&mkp MB2>;
+            key-positions = <11 12 13>;
         };
     };
 
