@@ -235,7 +235,7 @@
             bindings = <
 &kp QUESTION      &kp AT             &kp EXCL    &kp HASH         &kp PLUS                            &kp COLON          &kp MINUS         &kp DOUBLE_QUOTES     &kp SLASH                &kp PERCENT
 &kp LEFT_BRACKET  &kp AMPS           &kp DOLLAR  &kp CARET        &kp LEFT_BRACE  &none       &none   &kp RIGHT_BRACKET  &kp ASTRK         &kp LEFT_PARENTHESIS  &kp NON_US_HASH          &none
-&none             &kp DOUBLE_QUOTES  &kp EQUAL   &kp LS(INT_YEN)  &kp INT_YEN     &none       &none   &kp UNDER          &kp SINGLE_QUOTE  &kp SEMICOLON         &kp LS(INTERNATIONAL_1)  &kp RIGHT_SHIFT
+&trans            &kp DOUBLE_QUOTES  &kp EQUAL   &kp LS(INT_YEN)  &kp INT_YEN     &none       &none   &kp UNDER          &kp SINGLE_QUOTE  &kp SEMICOLON         &kp LS(INTERNATIONAL_1)  &kp RIGHT_SHIFT
 &trans            &trans             &trans      &trans           &trans          &trans      &trans  &trans                                                                              &none
             >;
 
@@ -244,10 +244,10 @@
 
         ARROW {
             bindings = <
-&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4   &kp NUMBER_5                       &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-&out OUT_USB    &out OUT_BLE  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &none       &none   &MmLeftHome   &MmDownPD      &MmUpPU       &MmRightEnd   &kp F10
-&bt BT_CLR_ALL  &bt BT_CLR    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &none       &none   &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &kp F10
-&trans          &trans        &trans         &trans         &trans         &trans      &trans  &trans                                                   &none
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                      &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&out OUT_USB  &out OUT_BLE  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &none       &none   &MmLeftHome   &MmDownPD      &MmUpPU       &MmRightEnd   &kp F10
+&trans        &trans        &bt BT_CLR_ALL  &bt BT_CLR    &none         &none       &none   &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &kp F10
+&trans        &trans        &trans          &trans        &trans        &trans      &trans  &trans                                                   &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(END) LC(HOME)>;
